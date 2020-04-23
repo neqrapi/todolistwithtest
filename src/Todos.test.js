@@ -16,8 +16,8 @@ describe('<Todos /> rendering', () => {
     const todos=[{id:1,content:'test'}]
     const props={todos,undefined}
     const wrapper=mount(<Todos {...props}/>)
-    const div=wrapper.find({className: 'todos'})
-		console.log(div.html())
-    expect(div.children()).to.have.lengthOf(1)
+    const items=wrapper.find("div.collection-item")
+		
+    expect(items.length).toBe(1)
   })
 });
